@@ -16,9 +16,9 @@ public void OnPluginStart()
 {
 	int arraySize = ByteCountToCells(PLATFORM_MAX_PATH);
 	g_MapList = new ArrayList(arraySize);
-	g_mapListSize = g_MapList.Length;
 	int serial = -1;
 	ReadMapList(g_MapList, serial, "default", 0);
+	g_mapListSize = g_MapList.Length;
 	RegAdminCmd( "fof_rm", Command_Random, ADMFLAG_GENERIC );
 	RegAdminCmd( "fof_nm", Command_Next, ADMFLAG_GENERIC );
 	PrintToServer("Change Map Commands plugin loaded.");
